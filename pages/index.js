@@ -32,7 +32,7 @@ const Home = props => {
         </div>
       </header>
       <main className="max-w-4xl mx-auto text-bluegray-400">
-        <h1 className="h1">СОВРЕМЕННЫЕ РЕШЕНИЯ В СФЕРЕ ИНФОМАЦИОННОЙ БЕЗОПАСНОСТИ</h1>
+        <h1 className="h1">СОВРЕМЕННЫЕ РЕШЕНИЯ В СФЕРЕ ИНФОМАЦИОННОЙ БЕЗОПАСНОСТИ!</h1>
         <div className="my-4 overflow-hidden rounded-xl">
           <Image src={nеvaArena} alt="Нева Арена" />
         </div>
