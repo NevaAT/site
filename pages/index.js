@@ -9,8 +9,10 @@ import BottomMenu from '../components/BottomMenu'
 import BottomContacts from '../components/BottomContacts'
 const Scroll  = require('react-scroll')
 const Element = Scroll.Element
+import { API_URL } from '@/config/index'
 
 const Home = props => {
+  console.log('--Home-Page-Data-->', props);
   return(
     <PageWrapper>
       <header className="max-w-4xl mx-auto">
@@ -69,7 +71,7 @@ const Home = props => {
             <p className="px-2 mb-12 text-center text-bluegray-300">
               Нам доверяют многие компании, потому что мы предоставляем качественные услуги и решения в сфере информационной безопасности в кратчайшие сроки и с гарантией качества.
             </p>
-            <BrandSlider kind="client" />
+            <BrandSlider kind="client" brands={props.brands} />
           </section>
         </Element>
         <Element name="partners">
@@ -78,7 +80,7 @@ const Home = props => {
             <p className="px-2 mb-12 text-center text-bluegray-300">
               Наши главные партнёры – это компании-производители софта и оборудования для защиты данных, мировые лидеры с сфере кибербезопасности. Благодаря плодотворной совместной работе с партнёрами, мы имеем возможность предлагать нашим клиентам самые передовые решения по конкурентным ценам.
             </p>
-            <BrandSlider kind="partner" />
+            <BrandSlider kind="partner" brands={props.brands} />
           </section>
         </Element>
         <Element name="contacts">
@@ -98,3 +100,13 @@ const Home = props => {
   )
 }
 export default Home
+
+export async function getStaticProps() {
+  const brands_res = await fetch(`${API_URL}/brands`)
+  const brands = await brands_res.json()
+  return {
+    props: {
+      brands
+    }
+  }
+}
