@@ -1,0 +1,7 @@
+[
+  {"title": "О НАС", "ref": "about"},
+  {"title": "УСЛУГИ", "ref": "services"},
+  {"title": "КЛИЕНТЫ", "ref": "clients"},
+  {"title": "ПАРТНЁРЫ", "ref": "partners"},
+  {"title": "КОНТАКТЫ", "ref": "contacts"}
+]
