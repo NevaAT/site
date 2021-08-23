@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import { NextSeo } from 'next-seo'
-import TopMenu from './TopMenu'
 
 
 const PageWrapper = props => {
@@ -30,7 +29,6 @@ const PageWrapper = props => {
         description={props.pgDescription || 'Нева-Автоматизация'}
         additionalMetaTags={props.more}
       />
-      <TopMenu />
       <div className="">{props.children}</div>
       {process.env.NODE_ENV === 'production' ?
         <>

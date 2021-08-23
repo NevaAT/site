@@ -6,7 +6,7 @@ const PlaceMap = props => {
   useEffect(() => setLoaded(true))
 
   return(
-    loaded && <div className={`overflow-hidden bg-bluegray-700 border rounded ${loaded && ("ring-2 ring-bluegray-800")}`}>
+    loaded && <div className={`overflow-hidden bg-bluegray-700 mb-4 border rounded ${loaded && ("ring-2 ring-bluegray-800")}`}>
       <iframe src={`https://yandex.ru/map-widget/v1/?um=constructor%${props.code}`} width="100%" height="400" frameBorder="0" />
     </div>
   )

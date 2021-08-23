@@ -8,13 +8,13 @@ import {
 } from '@heroicons/react/outline'
 import MenuItem from './MenuItem'
 
-const menuItems = require('../data/menuItems.json')
+// const menuItems = require('../data/menuItems.json')
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-const TopMenu = props => {
+const TopMenu = ({menus}) => {
 
   const [ urlPath, setUrlPath ] = useState('/')
   const [ isOffice, setIsOffice ] = useState(false)
@@ -30,18 +30,6 @@ const TopMenu = props => {
         <>
           <div className={`${(!isOffice)? "max-w-full": "max-w-5xl"} px-4 mx-auto sm:px-6`}>
             <div className="flex items-center justify-between pt-6 md:justify-center md:space-x-4">
-              {/* <div className="flex justify-start">
-                <Link href="/">
-                  <a>
-                    <span className="sr-only">NevaAT Logo</span>
-                    <img
-                      className="inline w-auto h-12 sm:h-16"
-                      src="/images/logo-white.png"
-                      alt="NevaAT Logo"
-                    />
-                  </a>
-                </Link>
-              </div> */}
               <div className="-my-2 -mr-2 md:hidden">
                 <Popover.Button className="inline-flex items-center justify-center p-2 text-gray-200 rounded-md hover:text-gray-200 hover:bg-gray-600 focus:outline-none">
                   <span className="sr-only">Open menu</span>
@@ -50,7 +38,7 @@ const TopMenu = props => {
               </div>
               <Popover.Group as="nav" className="hidden space-x-8 md:flex">
               {
-                menuItems.map(item => <MenuItem href={item.ref} title={item.title} key={`menu_${item.ref}`} />)
+                menus.map(item => <MenuItem href={item.Ref} title={item.Title} key={`menu_${item.id}`} />)
               }
               </Popover.Group>
             </div>
@@ -99,7 +87,7 @@ const TopMenu = props => {
                 <div className="px-5 py-6 space-y-6">
                   <div className="grid grid-cols-1 gap-y-4 gap-x-8">
                   {
-                    menuItems.map(item => <MenuItem href={item.ref} title={item.title} key={`mobilemenu_${item.ref}`} />)
+                    menus.map(item => <MenuItem href={item.Ref} title={item.Title} key={`mobilemenu_${item.id}`} />)
                   }
                   </div>
                 </div>
