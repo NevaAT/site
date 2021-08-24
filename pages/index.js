@@ -93,7 +93,7 @@ const Home = ({brands,cards,menus,phones,homepage}) => {
 export default Home
 
 export async function getServerSideProps() {
-  const brands_res = await fetch(`${API_URL}/brands`)
+  const brands_res = await fetch(`${API_URL}/brands?_limit=200`)
   const brands = await brands_res.json()
   const cards_res = await fetch(`${API_URL}/cards`)
   const cards = await cards_res.json()
