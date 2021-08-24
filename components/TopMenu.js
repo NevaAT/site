@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { Fragment } from 'react'
 import { Popover, Transition } from '@headlessui/react'
 import {
@@ -7,8 +8,6 @@ import {
   XIcon
 } from '@heroicons/react/outline'
 import MenuItem from './MenuItem'
-
-// const menuItems = require('../data/menuItems.json')
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -66,8 +65,8 @@ const TopMenu = ({menus}) => {
                     <div>
                       <Link href="/">
                         <a>
-                          <img
-                            className="w-auto h-10"
+                          <Image
+                            className="w-auto h-10" width="152" height="40"
                             src="/images/logo-white.png"
                             alt="NevaAT Logo"
                           />
