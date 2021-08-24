@@ -110,6 +110,7 @@ export async function getServerSideProps() {
       menus,
       phones,
       homepage
-    }
+    },
+    revalidate: 60
   }
 }
