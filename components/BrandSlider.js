@@ -1,6 +1,7 @@
 import { useEffect, useState  } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import SwiperCore, { Navigation, Autoplay } from 'swiper'
+import Image from 'next/image'
 
 const BrandSlider = ({ brands, kind }) => {
   
@@ -27,7 +28,7 @@ const BrandSlider = ({ brands, kind }) => {
       {
         brands.map(slide => {
           if (kind === slide.type) return <SwiperSlide key={`slide_${slide.id}`}>
-            <img src={`${slide.img.url}`} alt={slide.title} width={240} height={100} />
+            <Image src={`${slide.img.url}`} alt={slide.title} width={240} height={100} />
           </SwiperSlide>
         })
       }

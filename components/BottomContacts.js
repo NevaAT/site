@@ -1,14 +1,17 @@
+import Image from 'next/image'
+import Svg from '@/components/Svg'
+
 const BottomContacts = ({phones}) => <div className="flex flex-wrap items-center justify-center max-w-4xl mx-auto my-16 space-x-6">
-  <div>
-    <img src="/favicon_black_sq.png" alt="logo bottom" className="mt-0 h-[56px]" />
+  <div className="mt-0 h-[56px]">
+    <Image src="/favicon_black_sq.png" width="76" height="56" alt="logo bottom" />
   </div>
   <div>
     <a href="https://www.facebook.com/nevaautomatization/" target="_blank">
-      <img src="/images/fb.svg" alt="facebook" />
+      <Svg name="fb" width="48" height="48" className="text-bluegray-200" />
     </a>
   </div>
   <div className="flex justify-center py-4">
-    <img src="/images/phone.svg" alt="phone" />
+    <Svg name="phone" width="48" height="48" className="text-bluegray-200" />
     <div className="grid ml-4 place-self-center">
       <div className="grid justify-end grid-rows-2 text-sm text-bluegray-300">
         <a href={phones[0] && phones[0].link}>{phones[0] && phones[0].shown}</a>
@@ -17,7 +20,7 @@ const BottomContacts = ({phones}) => <div className="flex flex-wrap items-center
     </div>
   </div>
   <div className="flex justify-center py-4">
-    <img src="/images/mail.svg" alt="phone" />
+    <Svg name="mail" width="62" height="48" className="text-bluegray-200" />
     <div className="grid ml-4 place-self-center text-bluegray-300">info@nevaat.ru</div>
   </div>
 </div>
