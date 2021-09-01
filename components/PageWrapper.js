@@ -18,6 +18,7 @@ const PageWrapper = props => {
         <meta name="yandex-verification" content="42df6c347defa0d4" />
         <meta name="msapplication-TileColor" content="#000000" />
         <meta name="msapplication-TileImage" content="/favicon_black_sq.png" />
+        <link rel="shortcut icon" href="/favicon.svg" type=" image/svg+xml" />
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
         <link rel="apple-touch-icon" href="/favicon_black_sq.png" />
         <link rel="apple-touch-icon" sizes="76x76" href="/favicon_black_sq.png" />

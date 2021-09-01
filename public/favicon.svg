@@ -1,0 +1,16 @@
+<svg width="137" height="100" viewBox="0 0 137 100" xmlns="http://www.w3.org/2000/svg">
+  <g fill="none" fill-rule="evenodd">
+    <path stroke="#030303" stroke-width="3" d="M2 2h134v29H2z"/>
+    <path stroke="#000" stroke-width="5" stroke-linecap="square" d="M14 13h18M14 20h18M70 13h18M70 20h18"/>
+    <g transform="translate(3 37)">
+      <path stroke="#030303" stroke-width="3" d="M-1-1h134v29H-1z"/>
+      <path stroke="#000" stroke-width="5" stroke-linecap="square" d="M11 10h18M11 17h18M67 10h18M67 17h18M39 10h18"/>
+      <circle fill="#00AA21" cx="112.5" cy="12.5" r="5.5"/>
+      <path stroke="#000" stroke-width="5" stroke-linecap="square" d="M39 17h18"/>
+    </g>
+    <g>
+      <path stroke="#030303" stroke-width="3" d="M2 70h134v29H2z"/>
+      <path stroke="#000" stroke-width="5" stroke-linecap="square" d="M14 81h18M14 88h18M70 81h18M70 88h18"/>
+    </g>
+  </g>
+</svg>
