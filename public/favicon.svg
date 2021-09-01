@@ -1,16 +1,14 @@
-<svg width="137" height="100" viewBox="0 0 137 100" xmlns="http://www.w3.org/2000/svg">
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120">
   <g fill="none" fill-rule="evenodd">
-    <path stroke="#030303" stroke-width="3" d="M2 2h134v29H2z"/>
-    <path stroke="#000" stroke-width="5" stroke-linecap="square" d="M14 13h18M14 20h18M70 13h18M70 20h18"/>
-    <g transform="translate(3 37)">
-      <path stroke="#030303" stroke-width="3" d="M-1-1h134v29H-1z"/>
-      <path stroke="#000" stroke-width="5" stroke-linecap="square" d="M11 10h18M11 17h18M67 10h18M67 17h18M39 10h18"/>
-      <circle fill="#00AA21" cx="112.5" cy="12.5" r="5.5"/>
-      <path stroke="#000" stroke-width="5" stroke-linecap="square" d="M39 17h18"/>
+    <path stroke="#030303" stroke-width="3" d="M2 18h117v25H2z"/>
+    <path stroke="#000" stroke-linecap="square" stroke-width="5" d="M12 27h16M12 33h16M61 27h16M61 33h16"/>
+    <g transform="translate(3 49)">
+      <path stroke="#030303" stroke-width="3" d="M-1-1h117v25H-1z"/>
+      <path stroke="#000" stroke-linecap="square" stroke-width="5" d="M9 8h16M9 14h16M58 8h16M58 14h16M34 8h15"/>
+      <circle cx="96.1" cy="11.2" r="6" fill="#00AA21"/>
+      <path stroke="#000" stroke-linecap="square" stroke-width="5" d="M34 14h15"/>
     </g>
-    <g>
-      <path stroke="#030303" stroke-width="3" d="M2 70h134v29H2z"/>
-      <path stroke="#000" stroke-width="5" stroke-linecap="square" d="M14 81h18M14 88h18M70 81h18M70 88h18"/>
-    </g>
+    <path stroke="#030303" stroke-width="3" d="M2 78h117v25H2z"/>
+    <path stroke="#000" stroke-linecap="square" stroke-width="5" d="M12 87h16M12 93h16M61 87h16M61 93h16"/>
   </g>
 </svg>
