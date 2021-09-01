@@ -12,7 +12,7 @@ const PageWrapper = props => {
         <meta property="og:title" content="Современные решения в сфере информационной безопасности" />
         <meta property="og:description" content="Нева-Автоматизация" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://nevaat.ru/images/neva-arena.jpg"/>
+        <meta property="og:image" content="https://nevaat.ru/images/logo-white.png"/>
         <meta property="fb:app_id" content="257953674358265" />
         <meta name="format-detection" content="telephone=no" />
         <meta name="yandex-verification" content="42df6c347defa0d4" />
