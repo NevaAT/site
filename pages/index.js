@@ -55,7 +55,7 @@ const Home = ({brands,cards,menus,phones,homepage}) => {
         <Element name={menus.find(menu => menu.Ref === 'services')?.Ref} />
         <section>
           <SectionHeader menus={menus} item="services" />
-          <div className="grid grid-cols-2 gap-0 px-10 lg:grid-cols-4 sm:grid-cols-3 sm:gap-2 md:gap-6">
+          <div className="grid grid-cols-2 gap-0 px-10 sm:grid-cols-3 sm:gap-2 md:gap-6">
             <CardsGrid cards={cards} />
           </div>
         </section>
