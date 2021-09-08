@@ -18,7 +18,7 @@ const BrandSlider = ({ brands, kind }) => {
   return ( brands &&
     <Swiper
       spaceBetween={30}
-      slidesPerView={isMobile? 2: 4}
+      slidesPerView={isMobile? 2: 3}
       autoplay={{
         "delay": 2500,
         "disableOnInteraction": false
