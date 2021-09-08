@@ -18,7 +18,7 @@ import TextChapter from '@/components/TextChapter'
 const Home = ({brands,cards,menus,phones,homepage}) => {
   return(
     <PageWrapper>
-      <header className="max-w-4xl mx-auto">
+      <header className="mx-auto xl:max-w-7xl lg:max-w-4xl">
         <TopMenu menus={menus} />
         <div className="grid grid-cols-2 mx-6 mb-6 md:mx-4 lg:mx-0">
           <Link href="/">
@@ -32,45 +32,51 @@ const Home = ({brands,cards,menus,phones,homepage}) => {
             </a>
           </Link>
           <div className="grid justify-end grid-rows-2 text-sm text-bluegray-300">
-            <a href={phones[0] && phones[0].link}>{phones[0] && phones[0].shown}</a>
-            <a href={phones[1] && phones[1].link}>{phones[1] && phones[1].shown}</a>
+            <a href={phones[0]?.link}>{phones[0]?.shown || '--empty--'}</a>
+            <a href={phones[1]?.link}>{phones[1]?.shown || '--empty--'}</a>
           </div>
         </div>
       </header>
-      <main className="max-w-4xl mx-auto text-bluegray-400">
 
-        <h1 className="h1">{homepage && homepage.H1 || '--empty--'}</h1>
-        <div className="my-4 overflow-hidden rounded-xl">
+      <main className="w-full max-w-[1440px] mx-auto text-bluegray-400">
+
+        <h1 className="h1">{homepage?.H1 || '--empty--'}</h1>
+        {/* <div className="my-4 overflow-hidden border rounded-xl">
           <Image src={nеvaArena} alt="Нева Арена" />
+        </div> */}
+        <img src="/images/neva-arena.jpg" alt="нева арена" className="w-full h-auto mx-auto" />
+
+        <div className="mx-auto max-w-7xl">
+
+          <Element name={menus.find(menu => menu.Ref === 'about')?.Ref} />
+          <section className="text-double-block">
+            <TextChapter text={homepage.Chapter1} />
+            <TextChapter text={homepage.Chapter2} />
+          </section>
+
+          <Element name={menus.find(menu => menu.Ref === 'services')?.Ref} />
+          <section>
+            <SectionHeader menus={menus} item="services" />
+            <div className="grid grid-cols-2 gap-0 px-10 lg:grid-cols-4 sm:grid-cols-3 sm:gap-2 md:gap-6">
+              <CardsGrid cards={cards} />
+            </div>
+          </section>
+
+          <Element name={menus.find(menu => menu.Ref === 'clients')?.Ref} />
+          <section className="my-16">
+            <SectionHeader menus={menus} item="clients" />
+            <InnerText menus={menus} item="clients" />
+            <BrandSlider kind="client" brands={brands} />
+          </section>
+
+          <Element name={menus.find(menu => menu.Ref === 'partners')?.Ref} />
+          <section className="my-16">
+            <SectionHeader menus={menus} item="partners" />
+            <InnerText menus={menus} item="partners" />
+            <BrandSlider kind="partner" brands={brands} />
+          </section>
+
         </div>
-
-        <Element name={menus.find(menu => menu.Ref === 'about') && menus.find(menu => menu.Ref === 'about').Ref} />
-        <section className="text-double-block">
-          <TextChapter text={homepage.Chapter1} />
-          <TextChapter text={homepage.Chapter2} />
-        </section>
-
-        <Element name={menus.find(menu => menu.Ref === 'services') && menus.find(menu => menu.Ref === 'services').Ref} />
-        <section>
-          <SectionHeader menus={menus} item="services" />
-          <div className="grid grid-cols-2 gap-0 px-10 sm:grid-cols-3 sm:gap-2 md:gap-6">
-            <CardsGrid cards={cards} />
-          </div>
-        </section>
-
-        <Element name={menus.find(menu => menu.Ref === 'clients') && menus.find(menu => menu.Ref === 'clients').Ref} />
-        <section className="my-16">
-          <SectionHeader menus={menus} item="clients" />
-          <InnerText menus={menus} item="clients" />
-          <BrandSlider kind="client" brands={brands} />
-        </section>
-
-        <Element name={menus.find(menu => menu.Ref === 'partners') && menus.find(menu => menu.Ref === 'partners').Ref} />
-        <section className="my-16">
-          <SectionHeader menus={menus} item="partners" />
-          <InnerText menus={menus} item="partners" />
-          <BrandSlider kind="partner" brands={brands} />
-        </section>
 
         <Element name="contacts" />
         <section className="my-16">
