@@ -99,7 +99,7 @@ export async function getStaticProps() {
   const brands = await brands_res.json()
   const cards_res = await fetch(`${API_URL}/cards`)
   const cards = await cards_res.json()
-  const menus_res = await fetch(`${API_URL}/menus`)
+  const menus_res = await fetch(`${API_URL}/menus?_sort=Id:ASC`)
   const menus = await menus_res.json()
   const phones_res = await fetch(`${API_URL}/phones`)
   const phones = await phones_res.json()
