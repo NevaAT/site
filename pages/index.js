@@ -46,13 +46,13 @@ const Home = ({brands,cards,menus,phones,homepage}) => {
         </div>
         {/* <img src="/images/neva-arena.jpg" alt="нева арена" className="w-full h-auto mx-auto" /> */}
 
-        <Element name={menus.find(menu => menu.Ref === 'about')?.Ref} />
+        <Element name={menus?.find(menu => menu?.Ref === 'about')?.Ref} />
         <section className="text-double-block">
           <TextChapter text={homepage.Chapter1} />
           <TextChapter text={homepage.Chapter2} />
         </section>
 
-        <Element name={menus.find(menu => menu.Ref === 'services')?.Ref} />
+        <Element name={menus?.find(menu => menu?.Ref === 'services')?.Ref} />
         <section>
           <SectionHeader menus={menus} item="services" />
           <div className="grid grid-cols-2 gap-0 px-10 sm:grid-cols-3 sm:gap-2 md:gap-6">
@@ -60,14 +60,14 @@ const Home = ({brands,cards,menus,phones,homepage}) => {
           </div>
         </section>
 
-        <Element name={menus.find(menu => menu.Ref === 'clients')?.Ref} />
+        <Element name={menus?.find(menu => menu?.Ref === 'clients')?.Ref} />
         <section className="my-16">
           <SectionHeader menus={menus} item="clients" />
           <InnerText menus={menus} item="clients" />
           <BrandSlider kind="client" brands={brands} />
         </section>
 
-        <Element name={menus.find(menu => menu.Ref === 'partners')?.Ref} />
+        <Element name={menus?.find(menu => menu?.Ref === 'partners')?.Ref} />
         <section className="my-16">
           <SectionHeader menus={menus} item="partners" />
           <InnerText menus={menus} item="partners" />
