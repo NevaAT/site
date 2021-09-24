@@ -1,12 +1,12 @@
 import Link from 'next/link'
-import PageWrapper from "../components/PageWrapper"
+import PageWrapper from "@/components/PageWrapper"
 import Image from 'next/image'
 import nеvaArena from '../public/images/neva-arena.jpg'
-import BrandSlider from '../components/BrandSlider'
-import CardsGrid from '../components/CardsGrid'
-import PlaceMap from '../components/PlaceMap'
-import BottomMenu from '../components/BottomMenu'
-import BottomContacts from '../components/BottomContacts'
+import BrandSlider from '@/components/BrandSlider'
+import CardsGrid from '@/components/CardsGrid'
+import PlaceMap from '@/components/PlaceMap'
+import BottomMenu from '@/components/BottomMenu'
+import BottomContacts from '@/components/BottomContacts'
 const Scroll  = require('react-scroll')
 const Element = Scroll.Element
 import { API_URL } from '@/config/index'
@@ -99,7 +99,7 @@ export async function getStaticProps() {
   const brands = await brands_res.json()
   const cards_res = await fetch(`${API_URL}/cards`)
   const cards = await cards_res.json()
-  const menus_res = await fetch(`${API_URL}/menus`)
+  const menus_res = await fetch(`${API_URL}/menus?_sort=id:ASC`)
   const menus = await menus_res.json()
   const phones_res = await fetch(`${API_URL}/phones`)
   const phones = await phones_res.json()
