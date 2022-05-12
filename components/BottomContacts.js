@@ -10,6 +10,11 @@ const BottomContacts = ({phones}) => <div className="flex flex-wrap items-center
       <Svg name="fb" width="48" height="48" className="text-bluegray-200" />
     </a>
   </div>
+  <div>
+    <a href="https://vk.com/nevaavtomatizaciya" target="_blank">
+      <Svg name="vk" width="48" height="48" className="text-bluegray-200" />
+    </a>
+  </div>
   <div className="flex justify-center py-4">
     <Svg name="phone" width="48" height="48" className="text-bluegray-200" />
     <div className="grid ml-4 place-self-center">
