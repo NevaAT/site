@@ -5,11 +5,11 @@ const BottomContacts = ({phones}) => <div className="flex flex-wrap items-center
   <div className="mt-0 h-[56px]">
     <Image src="/favicon_black_sq.png" width="76" height="56" alt="logo bottom" />
   </div>
-  <div>
+  {/* <div>
     <a href="https://www.facebook.com/nevaautomatization/" target="_blank">
       <Svg name="fb" width="48" height="48" className="text-bluegray-200" />
     </a>
-  </div>
+  </div> */}
   <div>
     <a href="https://vk.com/nevaavtomatizaciya" target="_blank">
       <Svg name="vk" width="48" height="48" className="text-bluegray-200" />
