@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import PageWrapper from "@/components/PageWrapper"
 import Image from 'next/image'
 import nеvaArena from '../public/images/neva-arena.jpg'
@@ -10,41 +9,21 @@ import BottomContacts from '@/components/BottomContacts'
 const Scroll  = require('react-scroll')
 const Element = Scroll.Element
 import { API_URL } from '@/config/index'
-import TopMenu from '@/components/TopMenu'
 import InnerText from '@/components/InnerText'
 import SectionHeader from '@/components/SectionHeader'
 import TextChapter from '@/components/TextChapter'
+import Topic from '@/components/Topic'
 
-const Home = ({brands,cards,menus,phones,homepage}) => {
+const Home = ({ brands, cards, menus, phones, homepage }) => {
   return(
     <PageWrapper>
-      <header className="max-w-4xl mx-auto lg:max-w-4xl">
-        <TopMenu menus={menus} />
-        <div className="grid grid-cols-2 mx-6 mb-6 md:mx-4 lg:mx-0">
-          <Link href="/">
-            <a>
-              <span className="sr-only">NevaAT Logo</span>
-              <Image width={182} height={48}
-                className="inline w-auto h-10 sm:h-12"
-                src="/images/logo-white.png"
-                alt="NevaAT Logo"
-              />
-            </a>
-          </Link>
-          <div className="grid justify-end grid-rows-2 text-sm text-bluegray-300">
-            <a href={phones[0]?.link}>{phones[0]?.shown || '--empty--'}</a>
-            <a href={phones[1]?.link}>{phones[1]?.shown || '--empty--'}</a>
-          </div>
-        </div>
-      </header>
+
+      <Topic menus={menus} phones={phones} />
 
       <main className="w-full max-w-4xl mx-auto text-bluegray-400">
 
         <h1 className="h1">{homepage?.H1 || '--empty--'}</h1>
-        <div className="my-4 overflow-hidden rounded-xl">
-          <Image src={nеvaArena} alt="Нева Арена" />
-        </div>
-        {/* <img src="/images/neva-arena.jpg" alt="нева арена" className="w-full h-auto mx-auto" /> */}
+        <Image className="my-4 overflow-hidden rounded-xl" src={nеvaArena} alt="Нева Арена" />
 
         <Element name={menus?.find(menu => menu?.Ref === 'about')?.Ref} />
         <section className="text-double-block">

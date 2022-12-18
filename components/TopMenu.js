@@ -3,17 +3,14 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { Fragment } from 'react'
 import { Popover, Transition } from '@headlessui/react'
-import {
-  MenuIcon,
-  XIcon
-} from '@heroicons/react/outline'
+import { Bars3Icon, XIcon } from '@heroicons/react/24/outline'
 import MenuItem from './MenuItem'
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-const TopMenu = ({menus}) => {
+const TopMenu = ({ menus }) => {
 
   const [ urlPath, setUrlPath ] = useState('/')
   const [ isOffice, setIsOffice ] = useState(false)
@@ -32,7 +29,7 @@ const TopMenu = ({menus}) => {
               <div className="-my-2 -mr-2 md:hidden">
                 <Popover.Button className="inline-flex items-center justify-center p-2 text-gray-200 rounded-md hover:text-gray-200 hover:bg-gray-600 focus:outline-none">
                   <span className="sr-only">Open menu</span>
-                  <MenuIcon className="w-6 h-6" aria-hidden="true" />
+                  <Bars3Icon className="w-6 h-6" aria-hidden="true" />
                 </Popover.Button>
               </div>
               <Popover.Group as="nav" className="hidden space-x-8 md:flex">
@@ -64,13 +61,11 @@ const TopMenu = ({menus}) => {
                   <div className="flex items-center justify-between">
                     <div>
                       <Link href="/">
-                        <a>
-                          <Image
-                            className="w-auto h-10" width="152" height="40"
-                            src="/images/logo-white.png"
-                            alt="NevaAT Logo"
-                          />
-                        </a>
+                        <Image
+                          className="w-auto h-10" width="152" height="40"
+                          src="/images/logo-white.png"
+                          alt="NevaAT Logo"
+                        />
                       </Link>
                     </div>
                     <div className="-mr-2">
