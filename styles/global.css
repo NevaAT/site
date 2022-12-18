@@ -23,12 +23,12 @@
     @apply text-3xl font-bold text-center text-bluegray-200 mb-12;
   }
 }
-.swiper-container {
+.swiper {
   @apply bg-bluegray-300 sm:rounded p-4 border-bluegray-600 border-t-2 border-b-2 !important;
 }
-.swiper-container .swiper-button-next {
-  @apply text-bluegray-400 hover:text-blue-900 right-[5px];
+.swiper-button-next {
+  @apply !text-bluegray-400 hover:!text-blue-900 !right-[5px];
 }
-.swiper-container .swiper-button-prev {
-  @apply text-bluegray-400 hover:text-blue-900 left-[5px];
+.swiper-button-prev {
+  @apply !text-bluegray-400 hover:!text-blue-900 !left-[5px];
 }

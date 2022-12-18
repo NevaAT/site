@@ -1,10 +1,8 @@
-import MenuItem from './MenuItem'
+import MenuItem from '@/components/MenuItem'
 
-const BottomMenu = ({menus}) => <ul className="flex flex-wrap justify-center max-w-4xl px-4 mx-auto space-x-6">
+const BottomMenu = ({ menus }) => <ul className="flex flex-wrap justify-center max-w-4xl mx-auto">
 {
-  menus.map(item => <li key={`bottom_menu_${item.id}`}>
-    <MenuItem href={item.Ref} title={item.Title} />
-  </li>)
+  menus.map(item => <li key={`menu_${item.title}`}><MenuItem href={item.url} title={item.title} /></li>)
 }
 </ul>
 

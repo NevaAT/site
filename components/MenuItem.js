@@ -10,6 +10,6 @@ const MenuItem = props => <a onClick={(e)=> {
     smooth: true,
     offset: -30, // Scrolls to element + 50 pixels down the page
   })
-}} href={`#${props.href}`} className="text-sm font-medium text-bluegray-400 hover:text-white">{props.title}</a>
+}} href={`#${props.href}`} className="block px-2 text-sm font-medium sm:px-4 text-bluegray-400 hover:text-white active:bg-transparent">{props.title}</a>
 
 export default MenuItem

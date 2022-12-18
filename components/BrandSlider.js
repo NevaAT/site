@@ -3,8 +3,8 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import SwiperCore, { Navigation, Autoplay } from 'swiper'
 import Image from 'next/image'
 
-const BrandSlider = ({ brands, kind }) => {
-  
+const BrandSlider = ({ brands, kind, imgURL }) => {
+  // console.log('name in brandslider', brands);
   const [ isMobile, setIsMobile ] = useState(false)
 
   useEffect(() => {
@@ -27,8 +27,8 @@ const BrandSlider = ({ brands, kind }) => {
     >
       {
         brands.map(slide => {
-          if (kind === slide.type) return <SwiperSlide key={`slide_${slide.id}`}>
-            <Image src={`${slide.img.url}`} alt={slide.title} width={240} height={100} />
+          if (slide.type?.indexOf(kind) > -1) return <SwiperSlide key={`slide_${slide._id}`}>
+            <Image src={`${imgURL}${slide.img.path}`} alt={slide.title} width={240} height={100} />
           </SwiperSlide>
         })
       }

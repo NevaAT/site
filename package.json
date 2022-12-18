@@ -7,20 +7,21 @@
     "export": "next export"
   },
   "dependencies": {
-    "@headlessui/react": "^1.4.0",
-    "install": "^0.13.0",
-    "marked": "^4.0.1",
-    "next": "^12.0.1",
-    "next-seo": "^4.26.0",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-scroll": "^1.8.3",
-    "swiper": "^6.8.1"
+    "@headlessui/react": "^1.7.7",
+    "daisyui": "^2.45.0",
+    "marked": "^4.2.4",
+    "next": "^13.0.7",
+    "next-seo": "^5.15.0",
+    "npm": "^9.2.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scroll": "^1.8.9",
+    "swiper": "^8.4.5"
   },
   "devDependencies": {
-    "@heroicons/react": "^1.0.3",
-    "autoprefixer": "^10.2.6",
-    "postcss": "^8.3.5",
-    "tailwindcss": "^3.0.1"
+    "@heroicons/react": "^2.0.13",
+    "autoprefixer": "^10.4.13",
+    "postcss": "^8.4.20",
+    "tailwindcss": "^3.2.4"
   }
 }
