@@ -1,5 +1,5 @@
 import { Bars3Icon } from '@heroicons/react/24/outline'
-import MenuItem from './MenuItem'
+import MenuItem from '@/components/MenuItem'
 
 const TopMenu = ({ menus }) => {
 
