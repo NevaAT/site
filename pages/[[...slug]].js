@@ -16,7 +16,7 @@ const ChapterPage = props => {
 
   const { page, menus, models, settings, breadcrumbs, imgURL } = props
   
-  // console.log('settings:', settings)
+  // console.log('models:', models)
   return (
   <>
     <PageMeta
