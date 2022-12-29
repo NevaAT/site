@@ -119,7 +119,7 @@ export async function getStaticProps(context) {
 
   const res_settings = await fetch(`${api}pages/settings`, justGetIt)
   const settings = await res_settings?.json() ?? []
-  const imgURL = `${process.env.SITE_URL}/storage/uploads/`
+  const imgURL = `${process.env.SITE_URL}/storage/uploads`
   // console.log('settings:', settings)
   
   return {

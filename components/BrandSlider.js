@@ -35,7 +35,7 @@ const BrandSlider = ({ brands, kind, imgURL }) => {
       }
     </Swiper>
 
-    <div className="container grid grid-cols-2 gap-4 p-4 mx-auto">
+    <div className="container grid grid-cols-2 gap-4 p-4 mx-auto mt-12">
       {
         brands?.map(slide => {
           if (slide?.type?.indexOf(kind) > -1) return <div className="pt-2 border bg-white/90 card" key={slide?.id}>
