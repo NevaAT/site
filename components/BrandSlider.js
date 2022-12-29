@@ -26,8 +26,9 @@ const BrandSlider = ({ brands, kind, imgURL }) => {
       navigation
     >
       {
-        brands.map(slide => {
-          // console.log(`kind ${kind}, title: ${slide?.title}`);
+        brands.map((slide, no) => {
+          if (slide.type?.indexOf(kind) > -1) 
+            console.log(`kind ${kind} No.${no+1}, title: ${slide?.title}`);
           if (slide.type?.indexOf(kind) > -1) return <SwiperSlide key={`slide_${slide._id}`}>
             <Image src={`${imgURL}${slide.img.path}`} alt={slide.title} width={240} height={100} />
           </SwiperSlide>
@@ -35,7 +36,7 @@ const BrandSlider = ({ brands, kind, imgURL }) => {
       }
     </Swiper>
 
-    <div className="container grid grid-cols-2 gap-4 p-4 mx-auto mt-12">
+    {/* <div className="container grid grid-cols-2 gap-4 p-4 mx-auto mt-12">
       {
         brands?.map(slide => {
           if (slide?.type?.indexOf(kind) > -1) return <div className="pt-2 border bg-white/90 card" key={slide?.id}>
@@ -46,7 +47,7 @@ const BrandSlider = ({ brands, kind, imgURL }) => {
         </div>
         })
       }
-    </div>
+    </div> */}
 
 
   </>
