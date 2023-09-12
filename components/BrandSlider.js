@@ -34,7 +34,7 @@ const BrandSlider = ({ brands, kind, imgURL }) => {
             <SwiperSlide key={`slide_${slide._id}`}>
             {
               slide?.link
-              ? <Link href={slide?.link} className="cursor-pointer" target="_blank">
+              ? <Link href={slide?.link?.trim()} className="cursor-pointer" target="_blank">
                   <Image src={`${imgURL}${slide.img.path}`} alt={slide.title} width={240} height={100} />
                 </Link>
               : <Image src={`${imgURL}${slide.img.path}`} alt={slide.title} width={240} height={100} />
