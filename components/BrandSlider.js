@@ -2,6 +2,7 @@ import { useEffect, useState  } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import SwiperCore, { Navigation, Autoplay } from 'swiper'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const BrandSlider = ({ brands, kind, imgURL }) => {
   // console.log('name in brandslider', brands);
@@ -27,11 +28,19 @@ const BrandSlider = ({ brands, kind, imgURL }) => {
     >
       {
         brands.map((slide, no) => {
-          if (slide.type?.indexOf(kind) > -1) 
-            console.log(`kind ${kind} No.${no+1}, title: ${slide?.title}`);
-          if (slide.type?.indexOf(kind) > -1) return <SwiperSlide key={`slide_${slide._id}`}>
-            <Image src={`${imgURL}${slide.img.path}`} alt={slide.title} width={240} height={100} />
-          </SwiperSlide>
+          // if (slide.type?.indexOf(kind) > -1) 
+          //   console.log(`kind ${kind} No.${no+1}, title: ${slide?.title}`);
+          if (slide.type?.indexOf(kind) > -1) return (
+            <SwiperSlide key={`slide_${slide._id}`}>
+            {
+              slide?.link
+              ? <Link href={slide?.link} className="cursor-pointer" target="_blank">
+                  <Image src={`${imgURL}${slide.img.path}`} alt={slide.title} width={240} height={100} />
+                </Link>
+              : <Image src={`${imgURL}${slide.img.path}`} alt={slide.title} width={240} height={100} />
+            }
+            </SwiperSlide>
+          )
         })
       }
     </Swiper>
