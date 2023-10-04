@@ -11,7 +11,7 @@ const Topic = ({ menus, phones, settings, imgURL }) => {
         <Link href="/">
           <span className="sr-only">NevaAT Logo</span>
           <Image width={182} height={48}
-            className="inline h-10 sm:h-12"
+            className="inline h-10 sm:h-20"
             src={`${imgURL}${settings?.images?.logo?.path}`}
             alt="NevaAT Logo"
           />
