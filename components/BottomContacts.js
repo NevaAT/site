@@ -5,8 +5,8 @@ const BottomContacts = ({ phones, imgURL, settings }) => {
   // console.log(settings);
   return (
     <div className="flex flex-wrap items-center justify-center max-w-4xl mx-auto mt-16 space-x-6">
-      <div className="mt-4 h-26">
-        <Image src={imgURL+settings?.images?.small?.path} width="120" height="120" alt="logo bottom" />
+      <div className="h-16 pt-1 my-8">
+        <Image src={imgURL+settings?.images?.small?.path} width="96" height="96" alt="logo bottom" />
       </div>
       {/* <div>
         <a href="https://www.facebook.com/nevaautomatization/" target="_blank">
